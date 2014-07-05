@@ -48,11 +48,11 @@ load --table Entries
 {"_key": "rroonga", "title": "groonga and Ruby", "content": "groonga + Ruby = rroonga."}
 ]
 [[0,0.0,0.0],1]
-#|w| [hook][insert] id=1 oldvalue=rroonga value= flags=2
+#|w| [hook][insert] id=2 oldvalue= value=rroonga flags=1
 #|w| [hook][set] id=2 newvalue=groonga and Ruby oldvalue= flags=1
 delete Entries "rroonga"
 [[0,0.0,0.0],true]
-#|w| [hook][delete] id=1 oldvalue= value=rroonga flags=2
+#|w| [hook][delete] id=2 oldvalue=rroonga value= flags=1
 #|w| [hook][set] id=2 newvalue= oldvalue=groonga and Ruby flags=1
 example_hook_delete --table Entries --column title
 [[0,0.0,0.0],[1,0,0]]

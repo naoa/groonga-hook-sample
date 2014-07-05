@@ -27,10 +27,10 @@ static grn_obj *
 command_log_insert(grn_ctx *ctx, GNUC_UNUSED int nargs, GNUC_UNUSED grn_obj **args,
                    GNUC_UNUSED grn_user_data *user_data)
 {
-  grn_obj *id = grn_ctx_pop(ctx);
-  grn_obj *oldvalue = grn_ctx_pop(ctx);
-  grn_obj *value = grn_ctx_pop(ctx);
   grn_obj *flags = grn_ctx_pop(ctx);
+  grn_obj *value = grn_ctx_pop(ctx);
+  grn_obj *oldvalue = grn_ctx_pop(ctx);
+  grn_obj *id = grn_ctx_pop(ctx);
   GRN_PLUGIN_LOG(ctx, GRN_LOG_WARNING,
                  "[hook][insert] id=%d oldvalue=%s value=%s flags=%d\n",
                  GRN_INT32_VALUE(id),
@@ -44,10 +44,10 @@ static grn_obj *
 command_log_delete(grn_ctx *ctx, GNUC_UNUSED int nargs, GNUC_UNUSED grn_obj **args,
                    GNUC_UNUSED grn_user_data *user_data)
 {
-  grn_obj *id = grn_ctx_pop(ctx);
-  grn_obj *oldvalue = grn_ctx_pop(ctx);
-  grn_obj *value = grn_ctx_pop(ctx);
   grn_obj *flags = grn_ctx_pop(ctx);
+  grn_obj *value = grn_ctx_pop(ctx);
+  grn_obj *oldvalue = grn_ctx_pop(ctx);
+  grn_obj *id = grn_ctx_pop(ctx);
   GRN_PLUGIN_LOG(ctx, GRN_LOG_WARNING,
                  "[hook][delete] id=%d oldvalue=%s value=%s flags=%d\n",
                  GRN_INT32_VALUE(id),
