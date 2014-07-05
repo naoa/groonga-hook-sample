@@ -1,5 +1,3 @@
-#include <string.h>
-#include <stdlib.h>
 #include <groonga/plugin.h>
 
 #ifdef __GNUC__
