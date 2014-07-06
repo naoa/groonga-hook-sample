@@ -6,6 +6,7 @@ Install libgroonga-dev.
 
 Build this command.
 
+    % sh autogen.sh
     % ./configure
     % make
     % sudo make install
