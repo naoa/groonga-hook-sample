@@ -1,0 +1,12 @@
+register commands/hook
+
+table_create Entries TABLE_HASH_KEY ShortText
+column_create Entries title COLUMN_SCALAR ShortText
+
+table_create Tokens TABLE_PAT_KEY ShortText --default_tokenizer TokenBigram
+column_create Tokens entries_title COLUMN_INDEX|WITH_POSITION Entries title
+
+example_hook_add_value --table Entries --column title --value "hogehoge"
+example_hook_get_value --table Entries --column title
+example_hook_delete_value --table Entries --column title
+
