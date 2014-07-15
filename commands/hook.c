@@ -126,13 +126,13 @@ command_example_hook_add(grn_ctx *ctx, GNUC_UNUSED int nargs, GNUC_UNUSED grn_ob
   column = grn_obj_column(ctx, table, column_name, column_len);
 
   proc = grn_ctx_get(ctx, "log_set", -1);
-  grn_obj_add_hook(ctx, column, GRN_HOOK_SET, 0, proc, NULL);
+  grn_obj_add_hook(ctx, column, GRN_HOOK_SET, 0, proc, 0);
 
   proc = grn_ctx_get(ctx, "log_insert", -1);
-  grn_obj_add_hook(ctx, table, GRN_HOOK_INSERT, 0, proc, NULL);
+  grn_obj_add_hook(ctx, table, GRN_HOOK_INSERT, 0, proc, 0);
 
   proc = grn_ctx_get(ctx, "log_delete", -1);
-  grn_obj_add_hook(ctx, table, GRN_HOOK_DELETE, 0, proc, NULL);
+  grn_obj_add_hook(ctx, table, GRN_HOOK_DELETE, 0, proc, 0);
 
   grn_ctx_output_array_open(ctx, "RESULT", 3);
   nhooks = grn_obj_get_nhooks(ctx, column, GRN_HOOK_SET);
